@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rajdhani:wght@300;400;500;600;700&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+
+        <!-- Forms do cadastro do usuário -->
+        <div class="form-container">
+            
+            <form id="user-form">
+                <div>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" maxlength="8" required>
+                </div>
+                <div>
+                    <label for="address">Endereço:</label>
+                    <input type="text" id="address" readonly>
+                </div>
+                <div>
+                    <label for="origem">Origem:</label>
+                    <select id="origem" required>
+                        <option value="" disabled selected>Selecione a origem</option>
+                        <option value="Digital">Digital</option>
+                        <option value="Físico">Físico</option>
+                    </select>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Distribuição dos usuários cadastrados por Estado -->
+        <div id="distribuicao-estado" class="distribuicao-container">
+            <h2>Distribuição de Usuários por Estado</h2>
+            <ul id="estado-distribuicao"></ul>
+        </div>
+
+        <!-- Distribuição dos usuários cadastrados por Origem -->
+        <div id="distribuicao-origem" class="distribuicao-container">
+            <h2>Distribuição de Usuários por Origem</h2>
+            <ul id="origem-distribuicao"></ul>
+        </div>
+
+        <!-- Tabela dos usuários cadastrados -->
+        <div class="tabela-container">
+            <h2>Usuários Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Endereço</th>
+                        <th>Origem</th>
+                    </tr>
+                </thead>
+                <tbody id="user-tabela">
+                    <!-- Registro dos usuários na tabela ficam aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="me">pedro.feguima@gmail.com</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
